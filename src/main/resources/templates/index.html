@@ -40,7 +40,22 @@
     </div>
 </nav>
 
+<div th:each="eachArtist:${center}">
+    <div class="row">
+        <div class="col-4"></div>
 
+        <div class="col-4">
+
+            <img th:src="${eachPet.image}">
+
+        </div>
+
+        <div class="petdetails col-4">
+
+            <p th:text="${eachArtist.animalType}"></p>
+            <p th:text="${eachPet.name}"></p>
+            <p th:text="${eachPet.description}"></p>
+            <p th:text="${eachPet.available}? 'This pet has been found':'This pet has been lost'"></p>
 
 
    <!--

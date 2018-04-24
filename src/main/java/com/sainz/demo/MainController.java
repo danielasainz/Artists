@@ -51,6 +51,8 @@ public class MainController {
 }
 @RequestMapping("/addArtist")
     public String addArtist(Model model) {
+    //did I do the right thing below? do I want to return to the addArtist.html page?
+    model.addAttribute("Artist", new Artist());
     model.addAttribute("menuoption", "addartist");
     return "addArtist";
 }

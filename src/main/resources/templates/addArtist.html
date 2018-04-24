@@ -8,6 +8,27 @@
 
 <nav th:replace="/index::thenav(${menuoption})"></nav>
 
+<!-- @{/addBook} and also {aBook}. Need to create place for "${anArtist}-->
+<form action="#" th:action="@{/addArtist}" th:object="${Artist}" method="post">
+
+    <input type="hidden" th:field="*{id}"/><br/>
+
+    Full name: <input type="text" th:field="*{fullName}"/><br/>
+    Stage name: <input type="text" th:field="*{stageName}"/><br/>
+    Image URL: <input type="text" th:field="*{imageURL}"/><br/>
+    <button type="submit">Save</button>
+
+</form>
+
+
+<!--
+- Full Name
+
+- Stage Name (aka)
+
+- Image (add a default image if no image exists)  - this should be a rounded image. Make it a circle!
+
+Add a minimum of 3. -->
 
 <!-- <nav th:replace="index :: shortcut"></nav> -->
 
