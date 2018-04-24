@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:fragment="first">
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<nav th:fragment="thenav(menuoption)">
+    <div class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" th:classappend="${menuoption}=='home'?'active':''">
+                <a class="nav-link"  href="/">Home </a> <!-- ommit for now <span class="sr-only">(current)</span></a> -->
+            </li>
+            <li class="nav-item" th:classappend="${menuoption}=='addartist'?'active':''">
+                <a class="nav-link"  href="/addArtist">Add Artist</a>
+            </li>
+            <li class="nav-item" th:classappend="${menuoption}=='addsong'?'active':''">
+                <a class="nav-link" href="/addSong">Add Song</a>
+            </li>
+            <li class="nav-item" th:classappend="${menuoption}=='showartist'?'active':''">
+                <a class="nav-link" href="/showArtist">Show Artist</a>
+            </li>
+            <li class="nav-item" th:classappend="${menuoption}=='showsong'?'active':''">
+                <a class="nav-link" href="/showSong">Show Song</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+
+
+
+   <!--
+   this is the navbar I originally had
+
+<nav th:fragment="shortcut">
+<div class="topnav">
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/addArtist">Add Artist</a></li>
+    <li><a href="/addSong">Add Song</a></li>
+    <li><a href="/showArtist">Show Artists</a></li>
+    <li><a href="/showSong">Show Songs</a></li>
+</ul>
+</div>
+</nav>
+
+</body>
+</html> -->
